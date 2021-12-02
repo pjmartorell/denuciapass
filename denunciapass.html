@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DenunciaPass - Formulario</title>
+    <script src="html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="denunciapass.css" />
+    <link rel="icon" type="image/png" href="logo/dpass.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="contenedorform" id="contenedorform">
+      <div class="formulario" id="formulario">
+        <div class="card-body">
+          <form action="#" method="POST" id="form">
+            <p class="titulo">Datos del denunciante</p>
+            <div class="datospersonales">
+              <div class="form-group mb-3" id="nombre">
+                <input
+                  type="text"
+                  name="nombre"
+                  class="form-control"
+                  placeholder="Nombre"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidos">
+                <input
+                  type="text"
+                  name="apellidos"
+                  class="form-control"
+                  placeholder="Apellidos"
+                  required
+                />
+              </div>
+            </div>
+            <div class="dnifecha">
+              <div class="form-group mb-3" id="dni">
+                <input
+                  type="text"
+                  name="dni"
+                  class="form-control"
+                  placeholder="DNI/NIE"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="fecha">
+                <input
+                  type="date"
+                  name="fecha"
+                  class="form-control"
+                  placeholder="Fecha"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="hora">
+                <input
+                  type="time"
+                  name="hora"
+                  class="form-control"
+                  placeholder="Hora"
+                  required
+                />
+              </div>
+            </div>
+            <div class="datosdomicilio">
+              <div class="form-group mb-3" id="domicilio">
+                <input
+                  type="text"
+                  name="domicilio"
+                  class="form-control"
+                  placeholder="Domicilio"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="localidad">
+                <input
+                  type="text"
+                  name="localidad"
+                  class="form-control"
+                  placeholder="Localidad"
+                  required
+                />
+              </div>
+            </div>
+            <p class="titulo">Datos del denunciado</p>
+            <div class="establecimiento">
+              <div class="form-group mb-3" id="establecimiento">
+                <input
+                  type="text"
+                  name="establecimiento"
+                  class="form-control"
+                  placeholder="Local"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="localiza">
+                <input
+                  type="text"
+                  name="localizacion"
+                  class="form-control"
+                  placeholder="Dirección del local"
+                  required
+                />
+              </div>
+            </div>
+            <div class="municiprovincia">
+              <div class="form-group mb-3" id="municipio">
+                <input
+                  type="text"
+                  name="municipio"
+                  class="form-control"
+                  placeholder="Municipio"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3" id="provincia">
+                <input
+                  type="text"
+                  name="provincia"
+                  class="form-control"
+                  placeholder="Provincia"
+                  required
+                />
+              </div>
+            </div>
+            <p class="titulo">Datos del testigo</p>
+            <div class="datospersonalestestigo">
+              <div class="form-group mb-3" id="nombretestigo">
+                <input
+                  type="text"
+                  name="nombretestigo"
+                  class="form-control"
+                  placeholder="Nombre"
+                />
+              </div>
+              <div class="form-group mb-3" id="apellidostestigo">
+                <input
+                  type="text"
+                  name="apellidostestigo"
+                  class="form-control"
+                  placeholder="Apellidos"  
+                />
+              </div>
+            </div>
+            <div class="dnifechatestigo">
+              <div class="form-group mb-3" id="dnitestigo">
+                <input
+                  type="text"
+                  name="dnitestigo"
+                  class="form-control"
+                  placeholder="DNI/NIE"  
+                />
+              </div>
+              <div class="form-group mb-3" id="telefono">
+                <input
+                  type="tel"
+                  name="telefono"
+                  class="form-control"
+                  placeholder="Teléfono"  
+                />
+              </div>
+            </div>
+            <div class="datosdomiciliotestigo">
+              <div class="form-group mb-3" id="domiciliotestigo">
+                <input
+                  type="text"
+                  name="domiciliotestigo"
+                  class="form-control"
+                  placeholder="Domicilio"
+                />
+              </div>
+              <div class="form-group mb-3" id="localidadtestigo">
+                <input
+                  type="text"
+                  name="localidadtestigo"
+                  class="form-control"
+                  placeholder="Localidad"
+                />
+              </div>
+            </div>
+            <p class="titulo">Adjuntar a la denuncia</p>
+            <div class="form-group mb-3" id="adjuntar">
+              <textarea
+                name="adjuntar"
+                rows="4"
+                class="form-control"
+                placeholder="Adjuntar a la denuncia..."
+              ></textarea>
+            </div>
+
+            <div class="m-3 form-check mb-4">
+              <input type="checkbox" class="form-check-input" required />
+              <label class="form-check-label" for="Check1"
+                >Acepto la
+                <a
+                  href="#"
+                  class="link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdropPrivacidad"
+                  >Política de Privacidad</a
+                ></label
+              >
+            </div>
+            <button type="submit" class="formbutton btn btn-outline-secondary">
+              Crear denuncia
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--denuncia-->
+    <div class="contenedordenuncia" id="contenedor">
+      <div class="cuerpo" id="cuerpo">
+        <div class="marcagua">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="marcagua1">
+            <img src="images/logo.png" alt="">
+        </div>
+        <br />
+        <h4 class="aljuzgado text-center">
+          Al Juzgado de guardia de
+          <span id="localidadjuzgadogenerado"></span>
+        </h4>
+        <br /><br />
+        <span>D./Dña. </span><span id="nombregenerado"></span
+        ><span> </span>
+        <span id="apellidosgenerado"></span
+        ><span> </span><span>mayor de edad, con D.N.I. nº </span
+        ><span id="dnigenerado"></span><span>, </span
+        ><span>con domicilio a efecto de notificaciones en </span
+        ><span id="domiciliogenerado"
+          ></span
+        ><span> </span><span>de </span
+        ><span id="localidadgenerado"
+          ></span
+        ><span
+          >, ante este Juzgado comparezco, y como mejor proceda en Derecho, </span
+        ><strong>Digo:</strong> <br /><br /><br />
+        <h6 class="expongo text-center"><strong>EXPONGO:</strong></h6>
+        <br /><br />
+        <strong>Primero.- </strong><span>Que el día </span
+        ><span id="fechagenerado"></span><span> a las </span
+        ><span id="horagenerado"></span><span
+          > horas fuí al establecimiento
+          <span id="establecimientogenerado"
+            ></span
+          ><span> </span>
+          <span>sito en </span>
+          <span id="localizagenerado"></span>
+          <span> de la localidad de </span><span id="municipiogenerado"></span>
+          <span> (</span><span id="provinciagenerado"></span><span>).</span>
+          <br><br>
+          <strong>Segundo.- </strong><span>En el momento que fuí a acceder al citado local/establecimiento, NO se me 
+              permitió la entrada al ser discriminado drásticamente por que decidí NO mostrar mi tarjeta de vacunación, 
+              en la cual se podría ver mi estado privado y poder ser señalado en un grupo de SI VACUNADO o NO VACUNADO 
+              de la COVID-19, como me fue requerido y de obligado cumplimiento como requisito para acceder al servicio.
+          </span>
+          <br><br>
+          <strong>Tercero.- </strong><span>Que debido a mi reiterada negativa a mostrar mi cartilla de vacunación 
+              e insistir por parte del establecimiento/servicio a que negaría mi acceso, finalmente se me discriminó 
+              como consecuencia de la negación de acceso al señalado establecimiento el día y hora más arriba señalado.
+          </span>
+          <br><br>
+          <strong>Cuarto.- </strong><span>Atendiendo a que la vacunación en España </span><strong>No es obligatoria, </strong>
+          <span>por Ley NO se puede prohibir la entrada a ninguna persona por la razón de NO acreditar 
+              la señalada vacunación de la COVID-19 ni de ninguna otra enfermedad.</span>
+            <br><br>
+            <strong>Quinto.- </strong><span>De igual modo y atendiendo a que la vacunación en España </span><strong>No es obligatoria, </strong>
+            <span>y se me ha prohibido la entrada en el citado establecimiento/servicio a razón de la "supuesta" interpretación de NO VACUNACIÓN, 
+                se ha producido una vulneración de mi derecho a la intimidad, tal y como se expone en el <strong>Artículo 18.1 de la Constitución Española </strong>
+            <span>entre otros como derecho al consumidor, puesto que reitero nuevamente que No siendo 
+                obligatoria la vacunación en España se me ha discriminado por no haber mostrado mi carnet de 
+                vacunación causando daños morales, perjuicios y pérdida de tiempo a mi persona.
+            </span>
+            </span>
+            <br><br>
+            <strong>Sexto.- </strong><span>Asimismo, en ningún momento el encargado del establecimiento 
+                acreditó poseer la capacidad de tratamiento de datos de caracter personal para poder tramitar los datos que 
+                me fueron requeridos en el supuesto de que sí fuera obligatorio mostrarlo, tal y como establece 
+                el tratamiento de datos personales <strong>(art. 4.2 R.G.P.D y art. 5.1.t R.L.O.P.D).</strong>
+            </span>
+            <br><br>
+            <strong>Séptimo.- </strong><span>Que la situación citada en en base a la obligada vacunación para
+                permitir o no el acceso, me ha causado una importante discriminación a mi persona y supuestamente 
+                a quienes lo presenciaron, causando daños y perjuicios que se procederán a valorar en la instrucción 
+                de la presente denuncia.
+            </span>
+            <br><br>
+            <strong>Octavo.- </strong><span id="adjuntargenerado"></span>
+            <br><br><br>
+            <span>(rellenar en caso de testigo y/o prueba fotográfica)</span>
+            <br><br>
+            <span>Nombre completo del/la testigo: <span id="nombretestigogenerado"></span>
+            <span> </span><span id="apellidostestigogenerado"></span></span><br>
+            <span>Dirección: <span> </span><span id="domiciliotestigogenerado"></span><span> de </span>
+            <span id="localidadtestigogenerado"></span></span><br>
+            <span>Teléfono de contacto: <span id="telefonogenerado"></span></span><br>
+            <span>D.N.I.: <span id="dnitestigogenerado"></span></span>
+            <br><br>
+            <strong>Firma del testigo: </strong>
+            <br><br><br>
+            <div class="check">
+                <div class="form-check me-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      SI
+                    </label>
+                  </div>
+                  <div class="form-check me-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      NO
+                    </label>
+                  </div>
+                  <span>Se adjunta video/foto como DOC adjunto.</span>
+            </div>
+            <br><br>
+            <span>Por todo lo expuesto,</span>
+            <br><br>
+            <strong>SUPLICO AL JUZGADO, </strong><span>que tenga por realizadas las anteriores manifestaciones y se 
+                proceda a dar trámite a la denuncia presentada.
+            </span>
+            <br><br><br>
+            <p class="endonde text-end">En la ciudad de <span id="localidadenunciagenerado"></span>
+            <span>, en la fecha de </span><span id="fechadenunciagenerado"></span></p>
+            <br><br>
+            <p class="endonde text-end me-5">Firma denunciante</p>
+      </div>
+      <br><br>
+      <button type="button" class="btn btn-outline-secondary" id="print">Generar Pdf</button>
+    </div>
+    <!-- Modal privacidad-->
+    <div
+      class="modal fade"
+      id="staticBackdropPrivacidad"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Política de privacidad
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>Acerca de DenunciaPass</h5>
+            <br />
+            <p>
+              DenunciaPass es una web gratuita y sin ánimo de lucro, cuyo único 
+              fin es facilitar a los usuarios la confección de una denuncia al 
+              pasaporte COVID personalizada por medio de un formulario.<br /><br />En esta Política
+              de Privacidad explicamos si capturamos los datos personales de los usuarios
+              y el uso que haríamos de ellos dado el caso. <br /><br />Personal data is information that relates to an
+              individual who can be identified from that information, whether or
+              not in conjunction with any other information.<br /><br />This
+              Privacy Policy summarizes how we process personal data of our
+              business partners, Website users and job applicants.
+            </p>
+            <br />
+            <h5>Usuarios de la web</h5>
+            <br />
+            <p>
+              When you use this Website and our products and services, we
+              collect and use your information as described in this Privacy
+              Policy.<br /><br />We know that you care about how your
+              information is used and shared. This Privacy Policy explains what
+              information of yours will be collected by Nelson, and stored on
+              its servers, when you make use of the Website, as well as how the
+              information will be used. We will not use or share your
+              information with anyone except as described in this Privacy
+              Policy.
+            </p>
+            <br />
+            <h5>Información recolectada</h5>
+            <br />
+            <p><strong>Personal Information</strong></p>
+            <br />
+            <p>
+              Currently, we do not ask you to register for our products because
+              we simply do not need you to. We do not require the submission of
+              any information that identifies you personally, such as your name,
+              address and other ("Personal Information"). However, when you
+              commence direct communications with us, we may retain such
+              communications and the accompanying Personal Information in order
+              to process your inquiries, respond to your requests and improve
+              our services.
+            </p>
+            <br />
+            <p><strong>Statistical Information</strong></p>
+            <br />
+            <p>
+              We not collect and aggregate information regarding users use of
+              our Products, including, inter alia, advertisements viewed, pages
+              browsed, search inquiries, offers and services that interest you,
+              the type of browser you are using, your IP address, the URL you
+              have come from and the time spent at that URL, cookies and your
+              domain type and server ("Statistical Information").
+            </p>
+            <br />
+            <br />
+            <h5>Cambios en la Política de Privacidad</h5>
+            <br />
+            <p>
+              This Privacy Policy may be updated from time to time and therefore
+              we ask you to check back periodically for the most updated version
+              of the Privacy Policy.
+            </p>
+            <br />
+            <p>January 1, 2022</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Lo he leido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--scripts-->
+    <script src="denunciapass.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b5d48cdcc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

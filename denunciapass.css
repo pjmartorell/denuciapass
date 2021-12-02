@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contenedorform {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
+}
+.formulario {
+  position: relative;
+  width: 50%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.datospersonales,
+.datospersonalestestigo,
+.dnifecha,
+.dnifechatestigo,
+.datosdomicilio,
+.datosdomiciliotestigo,
+.establecimiento,
+.municiprovincia {
+  display: flex;
+  width: 100%;
+}
+#nombre,
+#nombretestigo {
+  width: 30%;
+  margin-right: 10px;
+}
+#apellidos,
+#apellidostestigo {
+  width: 70%;
+}
+#dni,
+#dnitestigo {
+  width: 50%;
+  margin-right: 10px;
+}
+#fecha {
+  width: 30%;
+  margin-right: 10px;
+}
+#hora {
+  width: 30%;
+}
+#telefono {
+  width: 50%;
+}
+#domicilio,
+#domiciliotestigo {
+  width: 70%;
+  margin-right: 10px;
+}
+#localidad,
+#localidadtestigo {
+  width: 30%;
+}
+#establecimiento {
+  width: 30%;
+  margin-right: 10px;
+}
+#localiza {
+  width: 70%;
+}
+#municipio {
+  width: 50%;
+  margin-right: 10px;
+}
+#provincia {
+  width: 50%;
+}
+.formbutton {
+  position: relative;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.link {
+  text-decoration: none;
+  color: red;
+}
+.link:hover {
+  color: red;
+}
+.contenedordenuncia {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: beige;
+  /*display: none;*/
+}
+.cuerpo {
+  position: relative;
+  width: 86%;
+  margin: auto;
+  text-align: justify;
+  font-size: 0.9em;
+}
+#nombregenerado,
+#apellidosgenerado,
+#domiciliogenerado,
+#localidadgenerado,
+#establecimientogenerado,
+#localizagenerado,
+#municipiogenerado,
+#provinciagenerado,
+#nombretestigogenerado,
+#apellidostestigogenerado,
+#domiciliotestigogenerado,
+#localidadtestigogenerado,
+#localidadenunciagenerado {
+  text-transform: uppercase;
+}
+#dnigenerado,
+#dnitestigogenerado {
+  text-transform: uppercase;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+}
+#print {
+  position: relative;
+  width: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+}
+.marcagua {
+  position: absolute;
+  top: 15%;
+}
+.marcagua1 {
+  position: absolute;
+  top: 68%;
+}
+.marcagua img,
+.marcagua1 img {
+  width: 100%;
+  opacity: 0.3;
+}
+@media (max-width: 767.98px) {
+  .contenedorform {
+    height: auto;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .formbutton {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .form-group input {
+    font-size: 0.8em;
+  }
+  .contenedordenuncia {
+    width: 100%;
+  }
+  .cuerpo {
+    font-size: 0.7em;
+  }
+  .aljuzgado {
+    font-size: 1.2em;
+  }
+  #print {
+    width: 60%;
+  }
+  #dni {
+    width: 32%;
+  }
+  #fecha {
+    width: 43%;
+  }
+  #hora {
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .contenedorform {
+    height: auto;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .contenedordenuncia {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (min-width: 1399.98px) {
+}
+/*----------index----------------*/
+#slider {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: SlideAnimation 32s infinite 0s;
+  overflow: hidden;
+}
+.slide:nth-child(2) {
+  animation-delay: 16s;
+}
+.bg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url(images/fondoportada.jpg) no-repeat center center;
+  background-size: cover;
+  animation: BgAnimation 32s infinite 0s;
+}
+.slide:nth-child(2) .bg {
+  background-image: url(images/fondoportada1.jpg);
+  animation: BgAnimation2 32s infinite 0s;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url();
+}
+.contentWrapper {
+  opacity: 0;
+  top: 50%;
+  left: 45%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: TitleAnimation 32s infinite 0s;
+  z-index: 2;
+}
+.slide:nth-child(2) .contentWrapper {
+  animation-delay: 16s;
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 8em !important;
+  font-weight: normal;
+  color: whitesmoke;
+  white-space: nowrap;
+}
+#text {
+  font-size: 1.4em;
+  position: relative;
+}
+#text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#text span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: white;
+}
+@keyframes SlideAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes BgAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-45%, -55%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes BgAnimation2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-55%, -45%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes TitleAnimation {
+  0% {
+    top: 50%;
+    left: 45%;
+    opacity: 0;
+  }
+  5% {
+    top: 50%;
+    left: 45%;
+    opacity: 0;
+  }
+  20% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  45% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  50% {
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+  }
+  100% {
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  #slider {
+    height: 400px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1001px) {
+  #slider {
+    height: 100vh;
+  }
+  h1 {
+    font-size: 100px;
+  }
+}
+
+.logopass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(5);
+  opacity: 0.2;
+  z-index: 2;
+}
+.logopass img {
+  animation: rotar 60s linear infinite;
+}
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nav {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  z-index: 1;
+}
+.nav a {
+  text-decoration: none;
+  padding: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4em;
+  color: whitesmoke;
+}
+.nav a:hover {
+  color: orange;
+}
+/*-----------legal----------------*/
+.contenedor_legal {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/fondoportada2.jpg);
+  background-size: cover;
+}
+.legal {
+  position: relative;
+  width: 42%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px gray, 0 15px 50px;
+}
+.legal img {
+  width: 100%;
+  height: auto;
+}
+.boton {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 15px 50px;
+  border-radius: 50%;
+}
+
+.boton i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+.boton i:hover {
+  font-size: 1.9em;
+}
+/*------------mapa-------------*/
+.mapa {
+  position: relative;
+  width: 75%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px gray, 0 15px 50px;
+}
+.mapa img {
+  width: 100%;
+  height: auto;
+}
+.logroño {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  /*animation: pulse 2s infinite;*/
+  top: 248px;
+  left: 716px;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(195, 9, 40, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(195, 9, 40, 0);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
