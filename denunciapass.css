@@ -97,7 +97,7 @@
   height: auto;
   margin: auto;
   background-color: beige;
-  display: none;
+  /*display: none;*/
 }
 .cuerpo {
   position: relative;
@@ -1065,4 +1065,7 @@
 }
 .volver a:hover {
   color: black;
+}
+.texto_politica {
+  text-align: justify;
 }
