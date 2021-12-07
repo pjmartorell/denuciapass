@@ -190,34 +190,10 @@
     width: 25%;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1199.98px) {
-  .contenedorform {
-    height: auto;
-  }
-  .formulario {
-    font-size: 0.9em;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-  }
-  .contenedordenuncia {
-    width: 80%;
-  }
-}
-
-@media (max-width: 991.98px) {
-}
-
-@media (min-width: 1399.98px) {
-}
 /*----------index----------------*/
 #slider {
   width: 100%;
-  height: 250px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -271,9 +247,9 @@
 .slide:nth-child(2) .contentWrapper {
   animation-delay: 16s;
 }
-h1 {
+.title {
   font-family: "Oswald", sans-serif;
-  font-size: 8em !important;
+  font-size: 8em;
   font-weight: normal;
   color: whitesmoke;
   white-space: nowrap;
@@ -370,22 +346,6 @@ h1 {
     opacity: 0;
   }
 }
-@media (min-width: 768px) {
-  #slider {
-    height: 400px;
-  }
-  h1 {
-    font-size: 60px;
-  }
-}
-@media (min-width: 1001px) {
-  #slider {
-    height: 100vh;
-  }
-  h1 {
-    font-size: 100px;
-  }
-}
 
 .logopass {
   position: absolute;
@@ -408,25 +368,156 @@ h1 {
   }
 }
 .nav {
-  position: relative;
-  width: 80%;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   margin: auto;
   z-index: 1;
 }
 .nav a {
   text-decoration: none;
-  padding: 20px;
+  padding: 5px;
   font-family: "Playfair Display", serif;
   font-size: 1.4em;
-  color: whitesmoke;
 }
 .nav a:hover {
-  color: orange;
+  color: rgb(224, 123, 8) !important;
+}
+@media (min-width: 250px) and (max-width: 299.98px) {
+  .title {
+    font-size: 2.8em;
+  }
+  #text {
+    font-size: 0.8em;
+  }
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .bg {
+    background-position: right;
+  }
+  .legal {
+    width: 80% !important;
+  }
+}
+@media (min-width: 300px) and (max-width: 567.98px) {
+  .title {
+    font-size: 3.6em;
+  }
+  #text {
+    font-size: 1em;
+  }
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .bg {
+    background-position: right;
+  }
+  .legal {
+    width: 80% !important;
+  }
+  .mapa {
+    width: 80% !important;
+  }
+}
+@media (min-width: 568px) and (max-width: 569.98px) {
+  .mapa {
+    width: 60% !important;
+  }
+}
+@media (min-width: 570px) and (max-width: 767.98px) {
+  .title {
+    font-size: 3.6em;
+  }
+  #text {
+    font-size: 1em;
+  }
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .bg {
+    background-position: right;
+  }
+  .legal {
+    width: 27% !important;
+  }
+  .mapa {
+    width: 60% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 799.98px) {
+  .contenedorform {
+    height: auto;
+  }
+  .formulario {
+    font-size: 0.9em;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .contenedordenuncia {
+    width: 80%;
+  }
+  .nav {
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    transform: translateX(0%);
+  }
+  .navbar-nav {
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .legal {
+    width: 70% !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 823.98px) {
+  .legal {
+    width: 28% !important;
+  }
+  .mapa {
+    width: 50% !important;
+  }
+}
+@media (min-width: 824px) and (max-width: 1199.98px) {
+  .legal {
+    width: 36% !important;
+  }
+  .mapa {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 1399.98px) {
 }
 /*-----------legal----------------*/
-.contenedor_legal {
+.contenedor_legal,
+.contenedor_mapa {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -470,10 +561,10 @@ h1 {
   font-size: 1.9em;
 }
 /*------------mapa-------------*/
+
 .mapa {
   position: relative;
   width: 75%;
-  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -483,15 +574,467 @@ h1 {
   width: 100%;
   height: auto;
 }
+.activated {
+  animation: pulse 2s infinite;
+}
 .logroño {
   position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: rgba(195, 9, 40, 1);
-  /*animation: pulse 2s infinite;*/
-  top: 248px;
-  left: 716px;
+  top: 20.8%;
+  left: 57.1%;
+}
+.pamplona {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 16%;
+  left: 62.5%;
+}
+.donosti {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 11.3%;
+  left: 60.6%;
+}
+.bilbao {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 11%;
+  left: 54.5%;
+}
+.santander {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 10.8%;
+  left: 49.8%;
+}
+.oviedo {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 10.8%;
+  left: 38%;
+}
+.santiago {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 16%;
+  left: 22.8%;
+}
+.lugo {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 14.8%;
+  left: 29.6%;
+}
+.pontevedra {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 20%;
+  left: 22%;
+}
+.ourense {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 22%;
+  left: 27.6%;
+}
+.ponferrada {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 19%;
+  left: 33.8%;
+}
+.leon {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 18%;
+  left: 39.6%;
+}
+.burgos {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 22%;
+  left: 50.6%;
+}
+.palencia {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 24.6%;
+  left: 45.2%;
+}
+.soria {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 27%;
+  left: 56.5%;
+}
+.zaragoza {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 27.5%;
+  left: 66.5%;
+}
+.vitoria {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 16.2%;
+  left: 56.1%;
+}
+.huesca {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 23%;
+  left: 69%;
+}
+.lleida {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 28.5%;
+  left: 75%;
+}
+.barcelona {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 31%;
+  left: 83.8%;
+}
+.girona {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 25.2%;
+  left: 87.5%;
+}
+.tarragona {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 33.6%;
+  left: 78.2%;
+}
+.zamora {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 29.8%;
+  left: 38%;
+}
+.valladolid {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 28.5%;
+  left: 45%;
+}
+.salamanca {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 35.5%;
+  left: 39%;
+}
+.avila {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 39%;
+  left: 44.5%;
+}
+.segovia {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 35%;
+  left: 48%;
+}
+.madrid {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 40%;
+  left: 50.7%;
+}
+.guadalajara {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 38%;
+  left: 53%;
+}
+.teruel {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 41%;
+  left: 64.7%;
+}
+.castellon {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 43.4%;
+  left: 72%;
+}
+.caceres {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 50%;
+  left: 35%;
+}
+.toledo {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 47%;
+  left: 48.4%;
+}
+.cuenca {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 44%;
+  left: 59.4%;
+}
+.valencia {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 50%;
+  left: 69.5%;
+}
+.badajoz {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 55.8%;
+  left: 31.6%;
+}
+.ciudadreal {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 54.4%;
+  left: 49%;
+}
+.albacete {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 54.4%;
+  left: 61%;
+}
+.alicante {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 60%;
+  left: 69%;
+}
+.huelva {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 71.8%;
+  left: 31.6%;
+}
+.sevilla {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 69.8%;
+  left: 37.6%;
+}
+.cordoba {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 65.3%;
+  left: 44%;
+}
+.jaen {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 67%;
+  left: 49.8%;
+}
+.granada {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 72.5%;
+  left: 50.8%;
+}
+.almeria {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 75.4%;
+  left: 57.4%;
+}
+.murcia {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 64.5%;
+  left: 64.8%;
+}
+.cadiz {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 78.8%;
+  left: 35.6%;
+}
+.malaga {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 76.5%;
+  left: 46.2%;
+}
+.santa {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 80.8%;
+  left: 15.6%;
+}
+.laspalmas {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 87.6%;
+  left: 18.6%;
+}
+.mallorca {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(195, 9, 40, 1);
+  top: 48.8%;
+  left: 84.3%;
 }
 @keyframes pulse {
   0% {
@@ -505,4 +1048,15 @@ h1 {
   100% {
     transform: scale(0.9);
   }
+}
+/*minuto 9:14*/
+.contenedor_politica {
+  width: 80%;
+  margin: auto;
+}
+.volver {
+  text-align: center;
+}
+.volver a {
+  text-decoration: none;
 }
