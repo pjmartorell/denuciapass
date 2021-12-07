@@ -408,6 +408,9 @@
   .legal {
     width: 80% !important;
   }
+  .contenedor_politica {
+    width: 90%;
+  }
 }
 @media (min-width: 300px) and (max-width: 567.98px) {
   .title {
@@ -433,6 +436,9 @@
   }
   .mapa {
     width: 80% !important;
+  }
+  .contenedor_politica {
+    width: 90%;
   }
 }
 @media (min-width: 568px) and (max-width: 569.98px) {
