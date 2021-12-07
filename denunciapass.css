@@ -138,11 +138,11 @@
 }
 .marcagua {
   position: absolute;
-  top: 15%;
+  top: 6%;
 }
 .marcagua1 {
   position: absolute;
-  top: 68%;
+  top: 51%;
 }
 .marcagua img,
 .marcagua1 img {
@@ -1050,8 +1050,9 @@
   }
 }
 /*minuto 9:14*/
+/*-------------------politica------------*/
 .contenedor_politica {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 .volver {
@@ -1059,4 +1060,9 @@
 }
 .volver a {
   text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+.volver a:hover {
+  color: black;
 }
