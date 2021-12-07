@@ -21,6 +21,36 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.3);
 }
+.instrucciones {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.cuerpo_instrucciones {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+.cuerpo_instrucciones h5 {
+  text-align: center;
+}
+.cuerpo_instrucciones span {
+  text-align: justify;
+}
+.instruccion_button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+}
 .datospersonales,
 .datospersonalestestigo,
 .dnifecha,
@@ -97,7 +127,7 @@
   height: auto;
   margin: auto;
   background-color: beige;
-  /*display: none;*/
+  display: none;
 }
 .cuerpo {
   position: relative;
@@ -142,7 +172,7 @@
 }
 .marcagua1 {
   position: absolute;
-  top: 51%;
+  top: 48%;
 }
 .marcagua img,
 .marcagua1 img {

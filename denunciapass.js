@@ -1,6 +1,14 @@
 var form = document.getElementById("form");
 let contenedorform = document.getElementById("contenedorform");
 let contenedor = document.getElementById("contenedor");
+let instruccion = document.getElementById("instruccion");
+let instrucciones = document.getElementById("instrucciones");
+
+function ocultarinstrucciones() {
+  instrucciones.style.display = "none";
+}
+
+instruccion.addEventListener("click", ocultarinstrucciones);
 
 function submitHandler(e) {
   contenedorform.style.display = "none";
