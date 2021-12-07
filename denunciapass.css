@@ -97,7 +97,7 @@
   height: auto;
   margin: auto;
   background-color: beige;
-  /*display: none;*/
+  display: none;
 }
 .cuerpo {
   position: relative;
