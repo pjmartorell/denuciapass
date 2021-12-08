@@ -1,7 +1,6 @@
 {
   "name": "denuciapass",
   "version": "1.0.0",
-  "description": "",
   "main": "denunciapass.js",
   "scripts": {
     "dev": "nodemon app.js"
@@ -16,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giterbyte/denuciapass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giterbyte/denuciapass/issues"
+  },
+  "homepage": "https://github.com/giterbyte/denuciapass#readme",
+  "description": ""
 }
