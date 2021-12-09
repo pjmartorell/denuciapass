@@ -3,7 +3,7 @@ const app = express();
 const mysql = require("mysql");
 require("dotenv").config();
 
-const { insert, read, update, remove } = require("./operations");
+const { insert, read } = require("./operations");
 
 app.use(express.json());
 
@@ -24,32 +24,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/insert", (req, res) => {
-  insert(
-    connection,
-    {
-      name: "slowD",
-      email: "trabajo",
-    },
-    (result) => {
-      res.json(result);
-    }
-  );
+  insert(connection, (result) => {
+    res.json(result);
+  });
 });
 
 app.get("/read", (req, res) => {
   read(connection, (result) => {
-    res.json(result);
-  });
-});
-
-app.get("/update", (req, res) => {
-  update(connection, { name: "Dpass" }, (result) => {
-    res.json(result);
-  });
-});
-
-app.get("/remove", (req, res) => {
-  remove(connection, { name: "Dpass" }, (result) => {
     res.json(result);
   });
 });
