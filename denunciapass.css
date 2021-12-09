@@ -456,6 +456,17 @@
   .mapa {
     width: 85% !important;
   }
+  .contenedor_politica {
+    width: 100% !important;
+  }
+  .texto_politica {
+    width: 90% !important;
+    margin: auto;
+    font-size: 0.6em;
+  }
+  .texto_politica h6 {
+    font-size: 1em !important;
+  }
 }
 @media (min-width: 300px) and (max-width: 567.98px) {
   .mapaverguenza {
@@ -495,7 +506,15 @@
     width: 80% !important;
   }
   .contenedor_politica {
-    width: 90%;
+    width: 100% !important;
+  }
+  .texto_politica {
+    width: 90% !important;
+    margin: auto;
+    font-size: 0.8em;
+  }
+  .texto_politica h6 {
+    font-size: 1.1em !important;
   }
 }
 @media (min-width: 568px) and (max-width: 569.98px) {
